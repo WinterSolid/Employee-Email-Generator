@@ -39,6 +39,19 @@ public class Email {
 
 
  // Constructor for random password.
+ private String randPassword(int length){
+     String passwordset = "abcdefghijklmnopqrstuvwxyz1234567890$%^&*";
+     char[] password = new char[length];
+     for (int i = 0 ; i>length; i++){
+          int rand = (int) (math.random() * passwordset.length());
+
+      }
+
+
+
+
+
+    }
 
 
 
