@@ -9,13 +9,17 @@ public class Email {
  private int mailboxcap;
  private String alteremail;
 
- //Constructor for First name.
+ //Constructor for First name. Constructor for last name.
+ public Email(String firstname,String lastname){
+  this.firstname = firstname;
+  this.lastname = lastname;
+ System.out.println("Email created for: "+ firstname+" "+lastname);
+ }
 
- //Constructor for last name.
 
- // Constructor for password.
+ // Constructor for random password.
 
- //constructor for Department
+ //constructor aking for Department
 
  //Constructor for capacity of mailbox
 
