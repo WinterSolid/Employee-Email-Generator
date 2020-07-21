@@ -26,15 +26,15 @@ public class Email {
   this.department = setdepartment();
 
 
-   if (Departchoice == 1){return "Department(Development)";
+   if (Departchoice == 1){return "(Development)";
    }
-   else if (Departchoice == 2){ return "department(Sales)";
+   else if (Departchoice == 2){ return "(Sales)";
    }
-   else if (Departchoice == 3){return "department(HR)";
+   else if (Departchoice == 3){return "(HR)";
    }
-   else if (Departchoice == 4){return "department(Public Safety)";
+   else if (Departchoice == 4){return "(Public Safety)";
    }
-   else (Departchoice == 0){ return "department(No specific)";
+   else (Departchoice == 0){ return "(No specific)";
  }
 
 
