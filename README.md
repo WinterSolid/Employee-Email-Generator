@@ -4,10 +4,12 @@
  
  Generates an email for following: firstname.lastname@department.company.com.
  
- Determining Department(DEvelpoment, Sales, HR, Public Safety).
+ Determining Department(Development, Sales, HR, Public Safety).
  
- Will generate random string for password.
+ Generate random password.
  
- Methods to change password,alternative email address  and set mailbox capacity.
+ Method for changing password and add alternative email address
+ 
+ Set mailbox capacity.
  
  Displays Name, Email and Mailbox capacity.
