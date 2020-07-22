@@ -24,6 +24,7 @@ public class Email {
     this.department = setdepartment();
     System.out.println("Department Affiliation:" + this.department);
  }
+
  private String setdepartment(){
     System.out.print("What is the employees department?\nEnter # for Department:\n0 for no specific department\n1 for Development\n2 for Sales\n3 for HR\n4 for Public Safety");
     Scanner in = new Scanner(System.in);
@@ -37,22 +38,20 @@ public class Email {
     else{ return "(None)"; }
    }
 
-
  // Constructor for random password.
  private String randPassword(int length){
-     String passwordset = "abcdefghijklmnopqrstuvwxyz1234567890$%^&*";
+     String passwordSet = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()";
      char[] password = new char[length];
      for (int i = 0 ; i>length; i++){
-          int rand = (int) (Math.random() * passwordset.length());//
-
+          int rand = (int) (Math.random() * passwordSet.length());//import math lang"Math.random"
+        password[i] = passwordSet.charAt(rand);
       }
-
+        return new String(password);
 
 
 
 
     }
-
 
 
  //Constructor for capacity of mailbox
