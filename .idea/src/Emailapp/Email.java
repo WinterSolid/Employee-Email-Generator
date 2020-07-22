@@ -84,6 +84,8 @@ public class Email {
   public int getMailboxcap() { return mailboxcap;}
 
   public String ShowInfo(){
-    return firstname + " "+lastname +"\n"+ email +"\n"+ password+"\n" + mailboxcap;
+    return "Name:              "+firstname.toUpperCase() + " "+lastname.toUpperCase()+
+    "\n" +"Email:    "+ email+"\n" +"Password:       "
+            + password+"\n"+"Mailbox Capacity:       " + mailboxcap;
   }
 }
