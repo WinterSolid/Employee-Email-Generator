@@ -10,29 +10,28 @@ public class Email {
   private String password;
   private String department;
   private String email;
-  private String companySuffix;
+  private String companySuffix = "starkindustries.com";
   private int mailboxcap;
   private int passwordlength = 16;
-
   private String alteremail;
 
   //Constructor for First name. Constructor for last name.
   public Email(String firstname, String lastname) {
     this.firstname = firstname;
     this.lastname = lastname;
-    System.out.println("Email created for: " + firstname + " " + lastname);
+    //System.out.println("Email created for: " + firstname + " " + lastname);
 
 
     //call methods asking for Department setting private String setdepartment()and randompassword;
     this.department = setdepartment();
-    System.out.println("Department: " + this.department);
+    //System.out.println("Department: " + this.department);
 
     // email:  firstname.lastname@department.company.com.
-    email = firstname .toLowerCase()+"."+ lastname.toLowerCase() + "@" + department.toLowerCase()+companySuffix;
-    System.out.println("Your Email is: " +  email);
+    email = firstname .toLowerCase()+"."+ lastname.toLowerCase() + "@" + department.toLowerCase()+"."+ companySuffix;
+   // System.out.println("Your Email is: " +  email);
 
     this.password = randomPassword(passwordlength);
-    System.out.println("Your Password is: " + this.password);
+    //System.out.println("Your Password is: " + this.password);
 
     }
 
@@ -68,7 +67,23 @@ public class Email {
   }
 
 
-  //Constructor for capacity of mailbox
+   //Constructor for capacity of mailbox
+  public void setMailboxcap(int capacity){
+     this.mailboxcap = capacity;
+  }
+  public void setalteremail (String alteremail){
+     this.alteremail = alteremail;
+  }
+  public void setpassword (String password){
+    this.password = password;
+  }
+  public String getFirstname(){return firstname;}
+  public String getLastname() { return lastname; }
+  public String getPassword() {return password; }
+  public String getEmail() {return email; }
+  public int getMailboxcap() { return mailboxcap;}
 
-
+  public String ShowInfo(){
+    return firstname + " "+lastname +"\n"+ email +"\n"+ password+"\n" + mailboxcap;
+  }
 }
