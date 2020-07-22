@@ -9,8 +9,10 @@ public class Email {
   private String lastname;
   private String password;
   private String department;
+  private String email;
   private int mailboxcap;
   private int passwordlength = 16;
+
   private String alteremail;
 
   //Constructor for First name. Constructor for last name.
@@ -26,10 +28,13 @@ public class Email {
 
     this.password = randomPassword(passwordlength);
     System.out.println("Your Password is: " + this.password);
+
+    //this.email = setEmail();
+    System.out.println("Your Email is: " + this.alteremail);
     }
 
   private String setdepartment(){
-    System.out.print("What is the employees department?\nEnter # for Department:\n0 for no specific department\n1 for Development\n2 for Sales\n3 for HR\n4 for Public Safety");
+    System.out.print("What is the employees department?\nEnter # for Department:\n0 for no specific department\n1 for Development\n2 for Sales\n3 for HR\n4 for Public Safety\n ");
     Scanner in = new Scanner(System.in);
 
     int Departchoice = in.nextInt();
@@ -54,8 +59,11 @@ public class Email {
   }
 
 
- //Constructor for capacity of mailbox
+  //Constructor for capacity of mailbox
 
- //Constructor for alternative email.
+  //Constructor for alternative email:  firstname.lastname@department.company.com.
+  /*private String setEmail() {
+    String email = (firstname + "." + lastname + "@" + department + ".com");
+     return String(email);*/
 
 }
