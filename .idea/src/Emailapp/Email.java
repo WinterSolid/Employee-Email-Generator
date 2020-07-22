@@ -10,6 +10,7 @@ public class Email {
   private String password;
   private String department;
   private String email;
+  private String companySuffix;
   private int mailboxcap;
   private int passwordlength = 16;
 
@@ -24,25 +25,33 @@ public class Email {
 
     //call methods asking for Department setting private String setdepartment()and randompassword;
     this.department = setdepartment();
-    System.out.println("Department Affiliation: " + this.department);
+    System.out.println("Department: " + this.department);
+
+    // email:  firstname.lastname@department.company.com.
+    email = firstname .toLowerCase()+"."+ lastname.toLowerCase() + "@" + department.toLowerCase()+companySuffix;
+    System.out.println("Your Email is: " +  email);
 
     this.password = randomPassword(passwordlength);
     System.out.println("Your Password is: " + this.password);
 
-    //this.email = setEmail();
-    System.out.println("Your Email is: " + this.alteremail);
     }
 
   private String setdepartment(){
-    System.out.print("What is the employees department?\nEnter # for Department:\n0 for no specific department\n1 for Development\n2 for Sales\n3 for HR\n4 for Public Safety\n ");
+    System.out.print("What is the employees department?\n" +
+            "Enter # for Department:\n0 for no specific department\n" +
+            "1 for Development\n2 " +
+            "for Sales\n" +
+            "3 for HR\n" +
+            "4 for Public Safety\n5 for Research\n ");
     Scanner in = new Scanner(System.in);
 
     int Departchoice = in.nextInt();
 
-    if (Departchoice == 1){return "(Development)"; }
-    else if (Departchoice == 2){ return "(Sales)"; }
-    else if (Departchoice == 3){return "(HR)"; }
-    else if (Departchoice == 4){return "(Public Safety)"; }
+    if (Departchoice == 1){return "Development"; }
+    else if (Departchoice == 2){ return "Sales"; }
+    else if (Departchoice == 3){return "HR"; }
+    else if (Departchoice == 4){return "Public Safety"; }
+    else if (Departchoice == 5){return "Research"; }
     else{ return "(None)"; }
     }
 
@@ -61,9 +70,5 @@ public class Email {
 
   //Constructor for capacity of mailbox
 
-  //Constructor for alternative email:  firstname.lastname@department.company.com.
-  /*private String setEmail() {
-    String email = (firstname + "." + lastname + "@" + department + ".com");
-     return String(email);*/
 
 }
