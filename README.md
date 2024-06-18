@@ -11,6 +11,12 @@ The Employee Email Generator Application automates the creation of user accounts
 - **Mailbox Capacity**: Allows setting of mailbox capacity for each employee.
 - **Display Information**: Displays employee name, email address, and mailbox capacity.
 
+## Technologies Used
+
+- Java: Programming language used for the backend logic.
+- IntelliJ IDEA, Eclipse
+- Git: Version control system for managing project versions and collaboration.
+
 ## Usage
 
 
