@@ -2,15 +2,16 @@ package EmailGenerator.model
 
 
 const val companySuffix: String = "starkindustries.com"
+const val PASSWORD_LENGTH = 16
+const val MAILBOX_CAPACITY = 1500
 
-class Email (var firstname: String?, var lastname: String?){
+class Email (var firstname: String, var lastname: String){
 
-    var password: String? = null
+    var password: String = " "
     var passwordlength: Int = 16
-    var department: String? = null
-    var email: String? = null
-    var alteremail: String? = null
-    var mailboxcap: Int = 0
+    var department: String = " "
+    var email: String = " "
+    var alteremail: String = " "
 
     init {
         // Initialize email and password in the constructor
@@ -20,11 +21,11 @@ class Email (var firstname: String?, var lastname: String?){
 
     fun setEmployeeDepartment(department: String) {
         this.department = department
-        this.email = "${firstname.toLowerCase()}.${lastname.toLowerCase()}@${department.toLowerCase()}.$companySuffix"
+        this.email = "${firstname.lowercase()}.${lastname.lowercase()}@${department.lowercase()}.$companySuffix"
     }
 
     fun generateEmployeePassword() {
-        this.password = createRandomPassword(passwordLength)
+        this.password = createRandomPassword(PASSWORD_LENGTH)
     }
 
     private fun createRandomPassword(length: Int): String {
@@ -39,10 +40,10 @@ class Email (var firstname: String?, var lastname: String?){
 
     fun showInfo(): String {
         return """
-            Name: ${firstname.toUpperCase()} ${lastname.toUpperCase()}
+            Name: ${firstname.uppercase()} ${lastname.uppercase()}
             Email: $email
             Password: $password
-            Mailbox Capacity: $mailboxCap
+            Mailbox Capacity: $MAILBOX_CAPACITY
         """.trimIndent()
     }
 }
