@@ -46,4 +46,3 @@ class Email (var firstname: String?, var lastname: String?){
         """.trimIndent()
     }
 }
-}

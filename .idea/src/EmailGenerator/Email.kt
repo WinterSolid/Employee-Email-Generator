@@ -1,9 +1,5 @@
 package EmailGenerator
 
-class Email {
-}
-package EmailGenerator
-
 import EmailGenerator.controller
 import EmailGenerator.view
 import EmailGenerator.model
