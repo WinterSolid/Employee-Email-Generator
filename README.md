@@ -1,4 +1,4 @@
-# Employee Email Generator Application
+# Employee Email Generator
 
 The Employee Email Generator Application automates the creation of user accounts and email addresses for new employees, along with managing passwords and mailbox settings.
 
