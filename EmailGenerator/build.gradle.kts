@@ -10,9 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib")) // Kotlin standard library
-    testImplementation(kotlin("test")) // Kotlin test library
+    implementation(kotlin("stdlib"))
+    testImplementation(kotlin("test"))
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.8.0")
 }
+
 
 tasks.test {
     useJUnitPlatform()
