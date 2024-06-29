@@ -1,4 +1,4 @@
-package EmailGenerator.model
+package emailgenerator.model
 
 
 const val companySuffix: String = "starkindustries.com"
@@ -8,10 +8,9 @@ const val MAILBOX_CAPACITY = 1500
 class Email (var firstname: String, var lastname: String){
 
     var password: String = " "
-    var passwordlength: Int = 16
     var department: String = " "
     var email: String = " "
-    var alteremail: String = " "
+    var mailboxCapacity = MAILBOX_CAPACITY
 
     init {
         // Initialize email and password in the constructor

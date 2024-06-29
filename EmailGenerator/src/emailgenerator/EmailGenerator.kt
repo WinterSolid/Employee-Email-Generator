@@ -1,10 +1,10 @@
-package EmailGenerator
+package emailgenerator
 
-import EmailGenerator.view
-import EmailGenerator.controller
-import EmailGenerator.model
+import emailgenerator.view.EmailView
+import emailgenerator.model.Email
+import emailgenerator.controller.EmailController
 
-    fun main() {
+fun main() {
         val model = Email("", "")
         val view = EmailView()
         val controller = EmailController(model, view)

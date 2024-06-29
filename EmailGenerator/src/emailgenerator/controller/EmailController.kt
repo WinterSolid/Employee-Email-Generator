@@ -1,7 +1,8 @@
-package EmailGenerator.controller
+package emailgenerator.controller
 
-import EmailGeneratormodel.Email
-import EmailGenerator.view.EmailView
+import emailgenerator.model.Email
+import emailgenerator.model.MAILBOX_CAPACITY
+import emailgenerator.view.EmailView
 
 class EmailController(private var model: Email, private val view: EmailView) {
 
@@ -11,10 +12,10 @@ class EmailController(private var model: Email, private val view: EmailView) {
 
         val departmentChoice = view.getDepartmentChoice()
         val department = setDepartment(departmentChoice)
-        model.setDepartment(department)
+        model.setEmployeeDepartment(department)
 
-        model.generatePassword()
-        model.mailboxCap = 500 // Setting default mailbox capacity
+        model.generateEmployeePassword()
+        model.mailboxCapacity = MAILBOX_CAPACITY // Setting default mailbox capacity
 
         view.displayInfo(model.showInfo())
     }

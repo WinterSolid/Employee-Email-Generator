@@ -1,4 +1,4 @@
-package EmailGenerator.view
+package emailgenerator.view
 
 import java.util.Scanner
 
