@@ -1,39 +1,34 @@
 # Employee Email Generator
 
-The Employee Email Generator Application automates the creation of user accounts and email addresses for new employees, along with managing passwords and mailbox settings.
+The **Employee Email Generator** automates the creation of email accounts for new employees, handling user information, password generation, and mailbox settings efficiently.
 
 ## Overview
-This project demonstrates an email application initially written in Java and converted to Kotlin using the MVC (Model-View-Controller) architecture. The application manages employee email accounts by capturing user details, setting department-specific email addresses, generating random passwords, and displaying user information.
+This application was originally developed in **Java** and later migrated to **Kotlin**, following the **MVC (Model-View-Controller) architecture**. It captures user details, assigns department-based email addresses, generates secure passwords, and manages mailbox configurations.
 
 ## Project Structure
-The project is divided into three main components:
+- **Model** (`Email.kt`): Contains data models and business logic.
+- **View** (`EmailView.kt`): Manages user input/output and display.
+- **Controller** (`EmailController.kt`): Coordinates interactions between the Model and View.
 
-## Model: Represents the data and business logic (Email.kt).
-## View: Handles user interactions and display (EmailView.kt).
-## Controller: Manages the communication between the Model and the View (EmailController.kt).
-
-## Conversion from Java to Kotlin
-The original Java project was converted to Kotlin for several reasons:
-
-- Conciseness: Kotlin's syntax is more concise, reducing boilerplate code.
-- Null Safety: Kotlin has built-in null safety features, reducing the risk of null pointer exceptions.
-- Interoperability: Kotlin is fully interoperable with Java, allowing seamless integration with existing Java codebases.
-- Modern Features: Kotlin offers modern programming features such as extension functions, higher-order functions, and coroutines for asynchronous programming.
-
+## Java to Kotlin Migration
+The project was refactored from Java to Kotlin to:
+- Reduce boilerplate through concise syntax.
+- Leverage null safety to minimize runtime errors.
+- Utilize Kotlin’s modern features such as extension functions and higher-order functions.
+- Maintain interoperability with existing Java codebases.
 
 ## Features
-
-- **User Creation**: Generates user accounts with a unique email address based on the format: firstname.lastname@department.company.com.
-- **Department Assignment**: Determines the department of the employee (Development, Sales, HR, Public Safety).
-- **Random Password Generation**: Generates a random password for each new employee.
-- **Password Management**: Provides methods for changing passwords and adding alternative email addresses.
-- **Mailbox Capacity**: Allows setting of mailbox capacity for each employee.
-- **Display Information**: Displays employee name, email address, and mailbox capacity.
+- Automated user account creation with email format: `firstname.lastname@department.company.com`
+- Department selection (Development, Sales, HR, Public Safety)
+- Secure random password generation
+- Password and alternate email address management
+- Mailbox capacity configuration
+- Employee information display including name, email, and mailbox size
 
 ## Technologies Used
+- Kotlin (Primary language)
+- Java (Legacy codebase)
+- IntelliJ IDEA / Eclipse (Development IDEs)
+- Git (Version control)
 
-- Java: Programming language used for the backend logic.
-- IntelliJ IDEA, Eclipse
-- Git: Version control system for managing project versions and collaboration.
 
-## Usage
